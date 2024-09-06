@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from Sounds import Sounds
 import time
+import os
 
 '''
 Sounds.play_startup()
@@ -30,8 +31,8 @@ class System:
         time.sleep(0.02)
         print('/_/  |_/_/_/ /_/   \___/\__,_/    \n') 
 
-
-
+        # print('~ Senha para modo super-usuário: ')
+        # os.system("su")
 
     def Captura_Audio(self):
         recognizer = sr.Recognizer() # Necessita construtor
@@ -51,8 +52,14 @@ class System:
         except sr.UnknownValueError:
             Sounds.play_negative()
             print("Mensagem incompreensível. Repita.")
-            return -1
         except sr.RequestError:
             Sounds.play_erro()
             print(f"Erro ao solicitar serviço: {sr.RequestError}")
             return -1
+
+    def encerraPrograma(self):
+        # sair do modo super usuario?
+        Sounds.play_turndown()
+
+
+

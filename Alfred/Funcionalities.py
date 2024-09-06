@@ -1,4 +1,5 @@
 from Sounds import Sounds
+import time
 
 @staticmethod
 def alfred(): # Func teste (método?)
@@ -12,9 +13,11 @@ def erro(): # Func teste (método?)
 
 import os
 @staticmethod
-def atualizar():
+def atualizar(): # func terminal
     Sounds.play_positive()
-    os.system("yay") # Solicita senha :()
+    os.system("sudo pacman -Sy") # Solicita senha :()
+    time.sleep(5)
+    os.system("void")
 
 @staticmethod
 def data():
