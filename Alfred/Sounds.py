@@ -1,5 +1,13 @@
 import playsound
 
+'''
+Sounds.play_startup()
+Sounds.play_turndown()
+Sounds.play_negative()
+Sounds.play_positive()
+Sounds.play_erro()
+'''
+
 class Sounds:
     
     @staticmethod

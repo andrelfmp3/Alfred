@@ -1,10 +1,28 @@
-from Microfone import Microfone
+from System import System
+import Funcionalities
 
-microfone = Microfone() # Instância da classe microfone. Não usa a classe diretamente.
+System.iniciaPrograma()
 
-audio = microfone.Captura_Audio()
-valor = microfone.Audio_Para_String(audio) # Se não identificar, retorna -1
+system = System() # Instância da classe microfone. Não usa a classe diretamente.
 
-while valor == -1:
-    audio = microfone.Captura_Audio()
-    valor = microfone.Audio_Para_String(audio)
+audio = system.Captura_Audio()
+palavras_chave = system.Audio_Para_String(audio) # Se não identificar, retorna -1
+
+while palavras_chave == -1:
+    audio = system.Captura_Audio()
+    palavras_chave = system.Audio_Para_String(audio)
+
+if palavras_chave == "Alfred" or palavras_chave == "Alfredo": # Listas de palavras possíveis?
+    Funcionalities.alfred()
+elif palavras_chave == "atualizar":
+    Funcionalities.atualizar()
+elif palavras_chave == "data":
+    Funcionalities.data()
+elif palavras_chave == "rebootar" or palavras_chave == "reboot":
+    Funcionalities.rebootar()
+elif palavras_chave == "suspender":
+    Funcionalities.suspender()
+elif palavras_chave == "desligar":
+    Funcionalities.desligar()
+else:
+    Funcionalities.erro()
