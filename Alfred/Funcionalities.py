@@ -1,28 +1,16 @@
 from Sounds import Sounds
-import time
+import time 
+import os
 
-@staticmethod
-def alfred(): # Func teste (método?)
-    Sounds.play_positive()
-    print("Patrão bruce.")
 
 @staticmethod
 def erro(): # Func teste (método?)
     Sounds.play_erro()
     print("Comando desconhecido.") # Tente novamente
-
-import os
+    
 @staticmethod
-def atualizar(): # func terminal
-    Sounds.play_positive()
-    os.system("sudo pacman -Sy") # Solicita senha :()
-    time.sleep(5)
-    os.system("void")
-
-@staticmethod
-def data():
-    Sounds.play_positive()
-    os.system("date") # Solicita senha :()
+def teste():
+    print("Programa testado")
 
 @staticmethod
 def rebootar():

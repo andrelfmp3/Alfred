@@ -1,54 +1,50 @@
 import speech_recognition as sr
+from plyer import notification
 from Sounds import Sounds
 import time
 import os
-
-'''
-Sounds.play_startup()
-Sounds.play_turndown()
-Sounds.play_negative()
-Sounds.play_positive()
-Sounds.play_erro()
-'''
 
 class System:
 
     def __init__(self):
         self.recognizer = sr.Recognizer() # ReconhecedorDeFala
-        self.microphone = sr.Microphone() 
+        self.microphone = sr.Microphone()
 
     def iniciaPrograma():
 
         Sounds.play_startup() # toca no meio da "animação"
 
-        print('    ___    ______              __ ')
+        print("\n")
         time.sleep(0.02)
-        print('   /   |  / / __/_______  ____/ / ')
+        print('     ___    ______              __   ')
         time.sleep(0.02)
-        print('  / /| | / / /_/ ___/ _ \/ __  /  ')
+        print('    /   |  / / __/_______  ____/ /   | ')
         time.sleep(0.02)
-        print(' / ___ |/ / __/ /  /  __/ /_/ /   ')
+        print('   / /| | / / /_/ ___/ _ \/ __  /    | Like Jarvis, but cooler')
         time.sleep(0.02)
-        print('/_/  |_/_/_/ /_/   \___/\__,_/    \n') 
+        print('  / ___ |/ / __/ /  /  __/ /_/ /     | Developed by andrelfmp3')
+        time.sleep(0.02)
+        print(' /_/  |_/_/_/ /_/   \___/\__,_/      | https://andrelfmp3.github.io/')
+        time.sleep(0.02)
+        print('_____________________________________|')
 
-        # print('~ Senha para modo super-usuário: ')
-        # os.system("su")
 
     def Captura_Audio(self):
         recognizer = sr.Recognizer() # Necessita construtor
         with sr.Microphone() as source:
             self.recognizer.adjust_for_ambient_noise(source) # Necessita construtor
             Sounds.play_positive() # retorno em audio
-            print("~ Ouvindo.")   
+            print("~ Ouvindo.")
             audio = self.recognizer.listen(source) # Necessita construtor
         return audio
+
 
     def Audio_Para_String(self, keyword):
         recognizer = sr.Recognizer()
         try:
             palavraChave = recognizer.recognize_google(keyword, language='pt-BR') 
-            print(f"Mensagem: {palavraChave}")
-            return  palavraChave
+            print(f"Mensagem: {palavraChave.lower()}")
+            return  palavraChave.lower()
         except sr.UnknownValueError:
             Sounds.play_negative()
             print("Mensagem incompreensível. Repita.")
@@ -58,7 +54,6 @@ class System:
             return -1
 
     def encerraPrograma(self):
-        # sair do modo super usuario?
         Sounds.play_turndown()
 
 

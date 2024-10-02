@@ -13,8 +13,8 @@ while palavras_chave != -1:
     audio = system.Captura_Audio()
     palavras_chave = system.Audio_Para_String(audio)
 
-    if palavras_chave == "teste":
-        Funcionalities.teste()
+    if palavras_chave == "dia" or "data":
+        Funcionalities.data()
     elif palavras_chave == "reboot" or "rebootar":
         Funcionalities.rebootar()
     elif palavras_chave == "suspender":
