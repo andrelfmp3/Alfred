@@ -10,8 +10,8 @@ class System:
         self.recognizer = sr.Recognizer() # ReconhecedorDeFala
         self.microphone = sr.Microphone()
 
+    @staticmethod
     def iniciaPrograma():
-
         Sounds.play_startup() # toca no meio da "animação"
 
         print("\n")
@@ -38,7 +38,6 @@ class System:
             audio = self.recognizer.listen(source) # Necessita construtor
         return audio
 
-
     def Audio_Para_String(self, keyword):
         recognizer = sr.Recognizer()
         try:
@@ -52,9 +51,3 @@ class System:
             Sounds.play_erro()
             print(f"Erro ao solicitar serviço: {sr.RequestError}")
             return -1
-
-    def encerraPrograma(self):
-        Sounds.play_turndown()
-
-
-

@@ -1,3 +1,4 @@
+'''
 from plyer import notification # IMPLEMENTAR DEPOIS
 import time
 
@@ -14,3 +15,4 @@ if __name__ == "__main__":
     send_notification("Alerta!", "Esta é uma notificação de exemplo.")
     time.sleep(5)  # Espera para mostrar outra notificação
     send_notification("Atualização!", "Seu programa está em execução.")
+'''
