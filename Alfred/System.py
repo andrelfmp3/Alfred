@@ -1,5 +1,7 @@
 import speech_recognition as sr
-from plyer import notification
+from Funcionalities import key
+import Funcionalities
+# from plyer import notification
 from Sounds import Sounds
 import time
 import os
@@ -12,29 +14,30 @@ class System:
 
     @staticmethod
     def iniciaPrograma():
-        Sounds.play_startup() # toca no meio da "animação"
-
         print("\n")
         time.sleep(0.02)
         print('     ___    ______              __   ')
         time.sleep(0.02)
         print('    /   |  / / __/_______  ____/ /   | ')
         time.sleep(0.02)
-        print('   / /| | / / /_/ ___/ _ \/ __  /    | Like Jarvis, but cooler')
+        print('   / /| | / / /_/ ___/ _ \/ __  /    | ')
         time.sleep(0.02)
         print('  / ___ |/ / __/ /  /  __/ /_/ /     | Developed by andrelfmp3')
         time.sleep(0.02)
-        print(' /_/  |_/_/_/ /_/   \___/\__,_/      | https://andrelfmp3.github.io/')
+        print(' /_/  |_/_/_/ /_/   \___/\__,_/      | Like Jarvis, but polished.')
         time.sleep(0.02)
-        print('_____________________________________|')
+        print('________________________________v1.0_|\n')
 
 
     def Captura_Audio(self):
         recognizer = sr.Recognizer() # Necessita construtor
         with sr.Microphone() as source:
             self.recognizer.adjust_for_ambient_noise(source) # Necessita construtor
-            Sounds.play_positive() # retorno em audio
-            print("~ Ouvindo.")
+            global key
+            print("~ Tentativa de ouvir.")
+            if key:
+                Sounds.play_positive() # retorno em audio
+                print("~ Ouvindo. (key ativada)")
             audio = self.recognizer.listen(source) # Necessita construtor
         return audio
 
@@ -42,12 +45,14 @@ class System:
         recognizer = sr.Recognizer()
         try:
             palavraChave = recognizer.recognize_google(keyword, language='pt-BR') 
-            print(f"Mensagem: {palavraChave.lower()}")
+            print(f"~ Mensagem: {palavraChave.lower()}")
             return  palavraChave.lower()
         except sr.UnknownValueError:
-            Sounds.play_negative()
-            print("Mensagem incompreensível. Repita.")
+            if key:
+                Sounds.play_negative()
+                print("~ Mensagem incompreensível. Repita.")
         except sr.RequestError:
-            Sounds.play_erro()
-            print(f"Erro ao solicitar serviço: {sr.RequestError}")
+            if key:
+                Sounds.play_erro()
+                print(f"~ Erro ao solicitar serviço: {sr.RequestError}")
             return -1

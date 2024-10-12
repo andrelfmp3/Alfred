@@ -28,4 +28,5 @@ while palavras_chave != -1:
         break
     else:
         Funcionalities.erro()
+    time.sleep(0.5) # "pausar" consumo de recursos
 

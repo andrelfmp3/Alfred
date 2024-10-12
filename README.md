@@ -15,18 +15,20 @@ Another L F R E D é um assistente virtual de comando de voz desenvolvido em Pyt
 - **Ativação por Palavra-Chave:** O assistente é ativado pela palavra "Alfred" e está sempre em execução. Ele também responde a ocorrências de "alfred" ou "alfredo" no meio de uma string (em letras minúsculas).
   
 - **Comandos Disponíveis:**
-  - **Solicitar Data e Hora:** Retorna a data e hora atuais.
+  - **Alfred:** comando de voz para ativar outros programas.
+  - **Teste:** comando de voz para testar funcionalidade do programa.
   - **Reboot:** Reinicia o computador.
   - **Suspender:** Coloca o computador em modo de suspensão.
   - **Desligar:** Desliga o computador.
-  - **Gerar Timer:** (Funcionalidade a ser implementada)..
-  - **Tocar Música:** (Funcionalidade a ser implementada).
-  - **Previsão do Tempo:** (Funcionalidade a ser implementada).
-  - **Buscar Informações:** (Funcionalidade a ser implementada)..
-  - **Notícias do Dia:** (Funcionalidade a ser implementada)..
-  - **Ligar VPN:** Estabelece uma conexão VPN.
-  - **Adicionar ao Obsidian:** Integra com o Obsidian para gerenciar anotações.
-  - **Encerrar Alfred:** Finaliza o assistente.
+  - **Encerrar:** Finaliza o assistente.
+
+- **Futuros Comandos:**
+  - **Gravar:** Grava os próximos 45 segundos
+  - **Timer:** Timer de 20 minutos
+  - **Playlist:** Tocar playlist do spotify ou youtube
+  - **Dormir:** Tocar som para dormir
+  - **GPT:** 
+  - **Volume:** (tirar do modo static), estatico Volume para 25, 50, 75, 100, 125 e 150
 
 ## Retorno
 
@@ -36,14 +38,14 @@ O assistente retorna informações via terminal, notificação, e comando de voz
 
 1. **Instalação:**
    - Clone este repositório:
-     ```bash
+     ```
      git clone https://github.com/andrelfmp3/alfred
      cd alfred
      ```
 
 2. **Dependências:**
    - Instale as dependências necessárias:
-     ```bash
+     ```
      pip install SpeechRecognition
      pip install pyaudio
      pip install playaudio
@@ -52,17 +54,13 @@ O assistente retorna informações via terminal, notificação, e comando de voz
 
 3. **Executar:**
    - Inicie o assistente:
-     ```bash
+     ```
      python alfred.py
      ```
 
-## Contribuições
-
-Sinta-se à vontade para contribuir com este projeto. Você pode abrir uma issue para relatar bugs ou sugerir melhorias. Pull requests são bem-vindos!
-
 ## Licença
 
-Este projeto é licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais informações.
+Este projeto é licenciado sob a MIT License. 
 
 ---
 
