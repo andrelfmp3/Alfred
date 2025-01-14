@@ -41,6 +41,7 @@ O assistente retorna informações via terminal, notificação, e comando de voz
     pip install SpeechRecognition
     pip install pyaudio
     pip install playaudio
+    pip install playsound
     pip install plyer
     ```
 

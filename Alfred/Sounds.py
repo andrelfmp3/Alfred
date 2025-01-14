@@ -26,3 +26,4 @@ class Sounds:
     @staticmethod
     def play_turndown():
         playsound.playsound('/home/andrelf/Documents/GitHub/Alfred/Sounds/turndown.mp3')
+
