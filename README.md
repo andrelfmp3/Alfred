@@ -1,10 +1,10 @@
-# Another L F R E D
+# Alfred
 
 **Like Jarvis, but cooler!**
 
 ## Descrição
 
-Another L F R E D é um assistente virtual de comando de voz desenvolvido em Python, focado em facilitar a interação com o computador através de comandos de voz. Programa desenvolvido para aprimorar minhas habilidades de **Programação Orientada e Objetos**.
+'Alfred' é um assistente virtual de comando de voz desenvolvido em Python, focado em facilitar a interação com o computador através de comandos de voz.
 
 ## Objetivos
 
@@ -22,14 +22,6 @@ Another L F R E D é um assistente virtual de comando de voz desenvolvido em Pyt
   - **Desligar:** Desliga o computador.
   - **Encerrar:** Finaliza o assistente.
 
-- **Futuros Comandos:**
-  - **Gravar:** Grava os próximos 45 segundos
-  - **Timer:** Timer de 20 minutos
-  - **Playlist:** Tocar playlist do spotify ou youtube
-  - **Dormir:** Tocar som para dormir
-  - **GPT:** 
-  - **Volume:** (tirar do modo static), estatico Volume para 25, 50, 75, 100, 125 e 150
-
 ## Retorno
 
 O assistente retorna informações via terminal, notificação, e comando de voz, proporcionando uma experiência rica e interativa.
@@ -38,25 +30,25 @@ O assistente retorna informações via terminal, notificação, e comando de voz
 
 1. **Instalação:**
    - Clone este repositório:
-     ```
-     git clone https://github.com/andrelfmp3/alfred
-     cd alfred
-     ```
+    ```
+    git clone https://github.com/andrelfmp3/alfred
+    cd alfred
+    ```
 
 2. **Dependências:**
    - Instale as dependências necessárias:
-     ```
-     pip install SpeechRecognition
-     pip install pyaudio
-     pip install playaudio
-     pip install plyer
-     ```
+    ```
+    pip install SpeechRecognition
+    pip install pyaudio
+    pip install playaudio
+    pip install plyer
+    ```
 
 3. **Executar:**
    - Inicie o assistente:
-     ```
-     python alfred.py
-     ```
+    ```
+    python alfred.py
+    ```
 
 ## Licença
 
