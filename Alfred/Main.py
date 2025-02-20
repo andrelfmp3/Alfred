@@ -1,9 +1,9 @@
 from System import System
 import Funcionalities
 
-System.iniciaPrograma() # pedir modo super usuario?
+System.iniciaPrograma() 
 
-system = System() # Instância da classe microfone. Não usa a classe diretamente.
+system = System() 
 
 audio = system.Captura_Audio()
 palavras_chave = system.Audio_Para_String(audio) # Se não identificar, retorna -1
@@ -28,5 +28,5 @@ while palavras_chave != -1:
         break
     else:
         Funcionalities.erro()
-    time.sleep(0.5) # "pausar" consumo de recursos
+    time.sleep(0.5) # "pausar" 
 

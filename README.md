@@ -1,22 +1,16 @@
 # Alfred
 
-**Like Jarvis, but cooler!**
-
 ## Descrição
 
-'Alfred' é um assistente virtual de comando de voz desenvolvido em Python, focado em facilitar a interação com o computador através de comandos de voz.
-
-## Objetivos
-
-- **Interação por Voz:** O projeto visa proporcionar uma experiência de usuário fluida, onde o assistente responde a comandos de voz e também fornece feedback sonoro.
+'**Alfred**' é o protótipo de um assistente virtual de comando de voz desenvolvido em Python, focado em facilitar a interação com o computador através de comandos de voz. **Compatível apenas com sistemas Linux**.
 
 ## Funcionalidades
 
-- **Ativação por Palavra-Chave:** O assistente é ativado pela palavra "Alfred" e está sempre em execução. Ele também responde a ocorrências de "alfred" ou "alfredo" no meio de uma string (em letras minúsculas).
+- **Ativação por Palavra-Chave:** O assistente é ativado pela palavra "Alfred" e está sempre em execução.
   
 - **Comandos Disponíveis:**
   - **Alfred:** comando de voz para ativar outros programas.
-  - **Teste:** comando de voz para testar funcionalidade do programa.
+  - **Teste:** comando de voz para testar se programa está funcional.
   - **Reboot:** Reinicia o computador.
   - **Suspender:** Coloca o computador em modo de suspensão.
   - **Desligar:** Desliga o computador.
@@ -24,11 +18,11 @@
 
 ## Retorno
 
-O assistente retorna informações via terminal, notificação, e comando de voz, proporcionando uma experiência rica e interativa.
+O assistente retorna informações via terminal e comando de voz, proporcionando uma experiência rica e interativa.
 
 ## Como Começar
 
-1. **Instalação:**
+1. **Instalação Linux:**
    - Clone este repositório:
     ```
     git clone https://github.com/andrelfmp3/alfred
@@ -50,10 +44,3 @@ O assistente retorna informações via terminal, notificação, e comando de voz
     ```
     python alfred.py
     ```
-
-## Licença
-
-Este projeto é licenciado sob a MIT License. 
-
----
-
