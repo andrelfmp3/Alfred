@@ -1,4 +1,4 @@
-import playsound
+import playsound # baixar
 
 class Sounds:
 

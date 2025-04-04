@@ -1,46 +1,51 @@
 # Alfred
 
-## Descrição
+**[Versão em Português](README-PT.md)**
 
-'**Alfred**' é o protótipo de um assistente virtual de comando de voz desenvolvido em Python, focado em facilitar a interação com o computador através de comandos de voz. **Compatível apenas com sistemas Linux**.
+## Description
 
-## Funcionalidades
+'**Alfred**' is the prototype of a voice command virtual assistant developed in Python, focused on facilitating interaction with the computer through voice commands. **Only compatible with Linux systems**.
 
-- **Ativação por Palavra-Chave:** O assistente é ativado pela palavra "Alfred" e está sempre em execução.
+## Features
+
+- **Keyword Activation:** The assistant is activated by the word "Alfred" and is always running.
   
-- **Comandos Disponíveis:**
-  - **Alfred:** comando de voz para ativar outros programas.
-  - **Teste:** comando de voz para testar se programa está funcional.
-  - **Reboot:** Reinicia o computador.
-  - **Suspender:** Coloca o computador em modo de suspensão.
-  - **Desligar:** Desliga o computador.
-  - **Encerrar:** Finaliza o assistente.
+- **Available Commands:**
+  - **Alfred:** voice command to activate other programs.
+  - **Test:** voice command to test if the program is functional.
+  - **Reboot:** Reboots the computer.
+  - **Suspend:** Puts the computer in suspend mode.
+  - **Shutdown:** Shuts down the computer.
+  - **Exit:** Terminates the assistant.
 
-## Retorno
+## Output
 
-O assistente retorna informações via terminal e comando de voz, proporcionando uma experiência rica e interativa.
+The assistant provides information via terminal and voice command, offering a rich and interactive experience.
 
-## Como Começar
+## Getting Started
 
-1. **Instalação Linux:**
-   - Clone este repositório:
+1. **Linux Installation:**
+   - Clone this repository:
     ```
     git clone https://github.com/andrelfmp3/alfred
     cd alfred
     ```
 
-2. **Dependências:**
-   - Instale as dependências necessárias:
+2. **Dependencies:**
+   - Install the necessary dependencies:
     ```
     pip install SpeechRecognition
-    pip install pyaudio
-    pip install playaudio
+    conda install conda-forge::speechrecognition
+
     pip install playsound
-    pip install plyer
+
+    pip install pyaudio
+    
+    pip install playaudio
     ```
 
-3. **Executar:**
-   - Inicie o assistente:
+3. **Run:**
+   - Start the assistant:
     ```
     python alfred.py
     ```

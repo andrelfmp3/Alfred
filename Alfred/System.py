@@ -1,4 +1,4 @@
-import speech_recognition as sr
+import speech_recognition as sr # baixar
 from Funcionalities import key
 import Funcionalities
 # from plyer import notification

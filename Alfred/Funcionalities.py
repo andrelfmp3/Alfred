@@ -1,7 +1,7 @@
 from Sounds import Sounds
 import time
 import threading
-import os
+import os # nativo
 
 key = False # variavel global "key", para ativar funcinalidades
 duracaoKey = 12 # tempo que key fica ativada. Duração do programa após comando "alfred"
@@ -11,6 +11,7 @@ Ativar "key", para permitir que funcionalidades funcionem.
 Chama thread que ativa key por 12 segundo, após ativar alfred.
 Após esse tempo, é necessário ativar novamente.
 '''
+
 class Funcionalities:
 
     @staticmethod
@@ -27,8 +28,8 @@ class Funcionalities:
         global key
         key = True
         print('~ Alfred ativado.')
-        thread = threading.Thread(target=desativaKey)
-        thread.start()
+        # thread = threading.Thread(target=desativaKey)
+        # thread.start()
 
     @staticmethod
     def teste():
